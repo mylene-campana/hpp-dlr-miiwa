@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot name="decor"> <!-- puzzle environment -->
+  <link name="decor_base">
+    <visual>
+      <origin xyz="0.5 0 3"/><!-- -0.05 0 -0.55 -->
+      <geometry>
+        <box size="0.07 4.4 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.5 0 3"/>
+      <geometry>
+        <box size="0.07 4.4 1" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="j_decor_one" type="fixed">
+    <parent link="decor_base"/>
+    <child link="l_decor_one"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+        
+  <link name="l_decor_one">
+    <visual>
+      <origin xyz="0.5 1.4 1.25"/>
+      <geometry>
+        <box size="0.07 1.6 2.5" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.5 1.4 1.25"/>
+      <geometry>
+        <box size="0.07 1.6 2.5" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <joint name="j_decor_two" type="fixed">
+    <parent link="l_decor_one"/>
+    <child link="l_decor_two"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+        
+  <link name="l_decor_two">
+   <visual>
+      <origin xyz="0.5 -1.4 1.25"/>
+      <geometry>
+        <box size="0.07 1.6 2.5" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.5 -1.4 1.25"/>
+      <geometry>
+        <box size="0.07 1.6 2.5" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+</robot>

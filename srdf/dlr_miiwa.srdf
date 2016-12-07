@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <robot name="dlr_miiwa">
   <gripper name="schunk_wsg50" clearance="0.05">
     <position> 0 0 0.142 0.5 -0.5 -0.5 -0.5 </position>
@@ -17,13 +18,22 @@
   <disable_collisions link1="lbr_iiwa_link_5" link2="lbr_iiwa_link_6" />
   <disable_collisions link1="lbr_iiwa_link_6" link2="lbr_iiwa_link_7" />
   <disable_collisions link1="lbr_iiwa_link_7" link2="schunk_wsg50_link_base" />
-  <disable_collisions link1="lbr_iiwa_link_7" link2="schunk_adapter_link" />
+  <!--<disable_collisions link1="lbr_iiwa_link_7" link2="schunk_adapter_link" />-->
   <disable_collisions link1="schunk_pw70_link_pan" link2="pan_tilt_mast_link" />
-  <disable_collisions link1="schunk_pw70_link_tilt" link2="pan_tilt_connector_link" />
+  <!--<disable_collisions link1="schunk_pw70_link_tilt" link2="pan_tilt_connector_link" />-->
   <disable_collisions link1="schunk_wsg50_link_base" link2="schunk_wsg50_link_left_jaw" />
   <disable_collisions link1="schunk_wsg50_link_base" link2="schunk_wsg50_link_right_jaw" />
   <disable_collisions link1="schunk_wsg50_link_left_jaw" link2="schunk_wsg50_link_right_jaw" />
   <disable_collisions link1="schunk_pw70_link_pan" link2="schunk_pw70_link_tilt" />
+  
+  <disable_collisions link1="schunk_pw70_link_base" link2="pan_tilt_mast_link" />
+  <disable_collisions link1="schunk_pw70_link_tilt" link2="mako_3d_mast_left_link" />
+  <disable_collisions link1="schunk_pw70_link_tilt" link2="mako_3d_mast_right_link" />
+  <disable_collisions link1="lbr_iiwa_link_7" link2="lbr_iiwa_link_cylinder" /> <!--ADDED-->
+  <disable_collisions link1="lbr_iiwa_link_6" link2="lbr_iiwa_link_cylinder" /> <!--ADDED-->
+  <disable_collisions link1="schunk_wsg50_link_base" link2="lbr_iiwa_link_cylinder" /> <!--ADDED-->
+  <disable_collisions link1="schunk_wsg50_link_left_jaw" link2="lbr_iiwa_link_cylinder"/> <!--ADDED-->
+  <disable_collisions link1="schunk_wsg50_link_right_jaw" link2="lbr_iiwa_link_cylinder"/>
   <!-- Contact surface on the mobile base -->
   <contact name="platform">
     <link name="miiwa_link"/>
